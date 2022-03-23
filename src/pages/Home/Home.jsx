@@ -24,6 +24,7 @@ const Home = () => {
                 </div>        
                 <div className="quick-profile__right">
                   <img src={avatar} alt="avatar" />
+                  ad
                 </div>
 
               </div>
