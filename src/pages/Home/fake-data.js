@@ -1,6 +1,8 @@
 import { IoMailSharp } from "react-icons/io5";
-import { AiOutlineGlobal, AiFillSkype,AiFillPhone } from "react-icons/ai";
-import {MdPlace} from 'react-icons/md'
+import { AiOutlineGlobal, AiFillSkype, AiFillPhone } from "react-icons/ai";
+import { MdPlace } from "react-icons/md";
+import { BsFacebook, BsSkype, BsGoogle, BsLinkedin } from "react-icons/bs";
+
 export const homeLink = [
   {
     icon: <IoMailSharp />,
@@ -22,4 +24,12 @@ export const homeLink = [
     icon: <MdPlace />,
     data: "286a Ta Quang Buu Street, Ward 4, District 8, Ho Chi Minh city",
   },
+];
+export const socialIcon = [
+  {
+    icon: <BsFacebook />,
+  },
+  { icon: <BsSkype /> },
+  { icon: <BsGoogle /> },
+  { icon: <BsLinkedin /> },
 ];
