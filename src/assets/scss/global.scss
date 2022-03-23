@@ -1,0 +1,11 @@
+@import './mixin.scss';
+
+// Init font base;
+
+@include font-face(Merriweather,Merriweather-Black,normal);
+@include font-face(MerriweatherBold,Merriweather-Bold,normal);
+@include font-face(MerriweatherBoldItalic,Merriweather-BoldItalic,normal);
+@include font-face(MerriweatherItalic,Merriweather-Italic,normal);
+@include font-face(MerriweatherLight,Merriweather-Light,normal);
+@include font-face(MerriweatherLightItalic,Merriweather-LightItalic,normal);
+@include font-face(MerriweatherRegular,Merriweather-Regular,normal);
