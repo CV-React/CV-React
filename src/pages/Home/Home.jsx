@@ -1,8 +1,10 @@
 import React from "react";
 import "./Home.scss";
 import { homeLink, socialIcon } from "./fake-data";
-import LinkItem from "./components/LinkItem/LinkItem";
+import LinkItem from "./components/LinkItem";
 import { GoPlusSmall } from "react-icons/go";
+import { FaBook } from "react-icons/fa";
+import MainTitle from "./components/MainTitle";
 
 const Home = () => {
   return (
@@ -13,7 +15,7 @@ const Home = () => {
           <div className="quick-profile">
             <div className="quick-profile-wrap">
               <div className="quick-profile__left">
-                <span className="plus">
+                <span onClick={() => alert("hello")} className="plus">
                   <GoPlusSmall />
                 </span>
                 <h1>Fuze Thien</h1>
@@ -51,14 +53,22 @@ const Home = () => {
                 </p>
               </div>
               <div className="about-cv">
-               <button type="button" className="btn btn-primary mr-20">DOWNLOAD CV</button>
-               <button type="button" className="btn btn-primary">CONTACT ME</button>
+                <a href="/cv2.pdf" target={"_blank"} rel="noreferrer">
+                  <button type="button" className="btn btn-primary mr-20">
+                    DOWNLOAD CV
+                  </button>
+                </a>
+                <a href="mailto:work.tranthien@gmail.com">
+                  <button type="button" className="btn btn-primary">
+                    CONTACT ME
+                  </button>
+                </a>
               </div>
             </div>
           </div>
-
           <div className="mt-50 education">
-           Education Block
+            <MainTitle text={"education"} icon={<FaBook />} />
+            <div className="timeline-education"></div>
           </div>
         </div>
       </div>
