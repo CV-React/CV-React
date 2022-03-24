@@ -1,6 +1,12 @@
 @import "../../index.scss";
 .container {
 }
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+}
 .home {
   // Modify home css
   width: 100%;
@@ -178,7 +184,155 @@
 
 .education {
 }
+.timeline {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  &__title {
+    font-size: 36px;
+    margin: 25px 0px 45px 0;
 
+    font-weight: bold;
+    font-family: raleway;
+    opacity: 0.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_icon {
+      height: 60px;
+      width: 60px;
+      background: #fff;
+      box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+      display: inline-block;
+      position: relative;
+
+      border-radius: 5px;
+      margin-right: 15px;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &__inner {
+    width: 100%;
+    max-width: 970px;
+    height: 100%;
+
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      transform: translate(50%, 0);
+
+      width: 2px;
+      height: 85%;
+      background: $mainColor4;
+      opacity: 0.5;
+    }
+  }
+  &__block {
+    width: 100%;
+    display: flex;
+  }
+  &__card {
+    background-color: #fff;
+    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+    padding: 15px 25px;
+    width: 44%;
+    border-left: 3px solid $mainColor8;
+    position: relative;
+    margin: -10px 0;
+    &.card-left:before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: -50px;
+      width: 50px;
+      height: 2px;
+      background: $mainColor3;
+    }
+    &.card-right:before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: -50px;
+      width: 50px;
+      height: 2px;
+      background: $mainColor3;
+    }
+  }
+
+  &-circle {
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    background-color: $mainColor7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 5px;
+
+    span {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 24px;
+      color: #fff;
+    }
+  }
+}
+.timeline-block.flex-end .timeline-circle {
+  top: 5px;
+  left: -86px;
+}
+.card {
+  &__degree {
+    font-size: 24px;
+    font-family: raleway;
+    margin-bottom: 5px;
+    opacity: 0.5;
+  }
+  &__school_name {
+    font-size: 20px;
+    font-family: raleway;
+    margin-bottom: 5px;
+    opacity: 0.5;
+  }
+  &__time {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: raleway;
+    opacity: 0.5;
+  }
+  &__desc {
+    font-size: 16px;
+    font-family: raleway;
+    opacity: 0.5;
+    font-weight: 300;
+  }
+  &__more {
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: $mainColor5;
+    }
+  }
+}
 .title {
   max-width: 100%;
   padding: 10px;
@@ -208,5 +362,16 @@
 
     font-family: raleway;
     color: $titleColor;
+  }
+}
+.skill {
+  @include quick-box(970, 500, 30px 10px, 5px);
+  background-color: $mainColor1;
+}
+.experience {
+  .timeline__inner {
+    &::before {
+      height: 77%;
+    }
   }
 }

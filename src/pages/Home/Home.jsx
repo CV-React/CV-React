@@ -1,11 +1,15 @@
 import React from "react";
 import "./Home.scss";
-import { homeLink, socialIcon } from "./fake-data";
-import LinkItem from "./components/LinkItem";
+import {
+  homeLink,
+  socialIcon,
+  educationData,
+  experienceData,
+} from "./fake-data";
 import { GoPlusSmall } from "react-icons/go";
 import { FaBook } from "react-icons/fa";
-import MainTitle from "./components/MainTitle";
-
+import TimeLineBlock from "./components/TimeLine/TimeLineBlock";
+import { BsCalendar2Minus } from "react-icons/bs";
 const Home = () => {
   return (
     <div className="home">
@@ -21,18 +25,19 @@ const Home = () => {
                 <h1>Fuze Thien</h1>
                 <h4>Software Engineer & UI/UX Expert</h4>
                 <div className="left-link">
-                  {homeLink &&
-                    homeLink.map((item, i) => (
-                      <LinkItem key={i} value={item} />
-                    ))}
+                  {homeLink?.map((item, i) => (
+                    <div key={i}>
+                      <span>{item.icon}</span>
+                      <span>{item.data}</span>
+                    </div>
+                  ))}
                 </div>
                 <div className="social">
-                  {socialIcon &&
-                    socialIcon.map((e, i) => (
-                      <span className="social-icon" key={i}>
-                        {e.icon}
-                      </span>
-                    ))}
+                  {socialIcon?.map((e, i) => (
+                    <span className="social-icon" key={i}>
+                      {e.icon}
+                    </span>
+                  ))}
                 </div>
                 <div className="quick-profile__left-splash"></div>
               </div>
@@ -67,8 +72,19 @@ const Home = () => {
             </div>
           </div>
           <div className="mt-50 education">
-            <MainTitle text={"education"} icon={<FaBook />} />
-            <div className="timeline-education"></div>
+            <TimeLineBlock
+              data={educationData}
+              title={"Education"}
+              icon={<FaBook />}
+            />
+          </div>
+          <div className="mt-50 skill">Skill</div>
+          <div className="mt-50 experience">
+            <TimeLineBlock
+              data={experienceData}
+              title={"Experience"}
+              icon={<BsCalendar2Minus />}
+            />
           </div>
         </div>
       </div>
