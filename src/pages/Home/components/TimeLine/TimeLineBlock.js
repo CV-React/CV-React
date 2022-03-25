@@ -1,6 +1,7 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import { useIntersection } from "hooks/useIntersection";
 const TimeLine = ({ data, index }) => {
+  const animated = useRef();
   const { degree, schoolName, time, desc, icon } = data;
   const isRight = () => {
     if (index % 2 === 0) return true;
@@ -9,12 +10,16 @@ const TimeLine = ({ data, index }) => {
   return (
     <div className={`timeline__block ${isRight() ? "flex-start" : "flex-end"}`}>
       <div
-        className={`timeline__card card ${
-          isRight() ? "card-left" : "card-right"
-        }`}
+        ref={animated}
+        className={`timeline__card animate_delay animated ${
+          useIntersection(animated, "0px") ? "fadeUp" : ""
+        } card ${isRight() ? "card-left" : "card-right"}`}
       >
         <div
-          className="timeline-circle"
+          ref={animated}
+          className={`timeline-circle animated  ${
+            useIntersection(animated, "0px") ? "fadeUp" : ""
+          }`}
           style={isRight() ? { right: -85 } : { left: -84 }}
         >
           <span>{icon}</span>
@@ -43,10 +48,18 @@ const TimeLine = ({ data, index }) => {
   );
 };
 const TimeLineBlock = ({ data, title, icon }) => {
+  const animated = useRef();
   return (
     <div className="timeline">
-      <h2 className="timeline__title ">
-        <span className="timeline__title_icon">{icon}</span>
+      <h2 className="timeline__title section__title ">
+        <span
+          ref={animated}
+          className={`animated timeline__title_icon ${
+            useIntersection(animated, "0px") ? "fadeUp" : ""
+          }`}
+        >
+          {icon}
+        </span>
         {title}
       </h2>
       <div className="timeline__inner">
