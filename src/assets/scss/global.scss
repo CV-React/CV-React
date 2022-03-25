@@ -9,17 +9,43 @@
 @include font-face(MerriweatherLightItalic, Merriweather-LightItalic, normal);
 @include font-face(MerriweatherRegular, Merriweather-Regular, normal);
 @include font-face(raleway, Raleway-Bold, normal);
+@include font-face(raleway_thin, Raleway-VariableFont_wght, normal);
+@keyframes fadeUpBanner {
+  0% {
+    transform: translateY(-30px) scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(60px) scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .mt-50 {
   margin-top: 50px;
 }
+
 .mr-20 {
   margin-right: 20px;
 }
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -46,4 +72,26 @@
   color: #fff;
   background-color: $mainColor4;
   border-color: $mainColor4;
+}
+
+.animated {
+  @include animated;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.fadeUp {
+  -webkit-animation-name: fadeUp;
+  animation-name: fadeUp;
+}
+
+.fadeUpBanner {
+  -webkit-animation-name: fadeUpBanner;
+  animation-name: fadeUpBanner;
+}
+
+.animate_delay {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
 }

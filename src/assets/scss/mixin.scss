@@ -8,32 +8,36 @@
     text-overflow: ellipsis;
     word-break: break-word;
 }
+
 // Flex which can have choose justify-content and align-items
-@mixin flex($justify,$align) {
+@mixin flex($justify, $align) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
 }
-// Quick generate a box 
-@mixin quick-box($width,$height,$padding,$borderRadius) {
+
+// Quick generate a box
+@mixin quick-box($width, $height, $padding, $borderRadius) {
     padding: $padding;
     border-radius: $borderRadius;
-    @if $width > 0 {
+    @if $width>0 {
         width: #{$width}px;
-    } @else{
+    }
+    @else {
         width: 100px;
     }
-    @if $height > 0 {
+    @if $height>0 {
         height: #{$height}px;
-    } @else{
+    }
+    @else {
         height: 100px;
     }
 }
+
 // convert fontSize from px to em
-@mixin fs($fs, $base : 16){
+@mixin fs($fs, $base: 16) {
     font-size: #{$fs / $base}em;
 }
-
 
 // Init font face mixin
 @mixin font-face($fontFamilyName, $fontName, $fontWeight) {
@@ -41,14 +45,21 @@
         font-family: "#{$fontFamilyName}";
         src: url("../fonts/#{$fontName}.ttf") format("opentype");
     }
-    @if $fontWeight == bold {
-        font-weight: normal;
-        font-style: normal;
-    } @else if $fontWeight == bolder {
-        font-weight: normal;
-        font-style: normal;
-    } @else if type-of($fontWeight) == "number" {
+    @if $fontWeight==bold {
         font-weight: normal;
         font-style: normal;
     }
+    @else if $fontWeight==bolder {
+        font-weight: normal;
+        font-style: normal;
+    }
+    @else if type-of($fontWeight)=="number" {
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@mixin animated {
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
 }

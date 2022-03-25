@@ -1,12 +1,15 @@
 @import "../../index.scss";
 .container {
 }
+
 .flex-start {
   justify-content: flex-start;
 }
+
 .flex-end {
   justify-content: flex-end;
 }
+
 .home {
   // Modify home css
   width: 100%;
@@ -16,9 +19,7 @@
   &-specialBg {
     height: 400px;
     width: 100%;
-
     background: black url("../../assets/images/banner.webp") no-repeat;
-
     filter: blur(2px);
   }
   &-wrap {
@@ -26,68 +27,88 @@
     max-width: 970px;
     height: fit-content;
     margin: auto;
-
     position: relative;
   }
 }
+
+.text--shadow {
+  text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text_white {
+  color: #fff;
+}
+
 .quick-profile {
   width: 100%;
-  height: fit-content;
-  margin-top: calc(-371.5px / 2);
-  z-index: 2;
-
-  &-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    position: relative;
-  }
-  &__left {
-    flex: 0 0 60%;
-    width: 100%;
-    max-width: 100%;
-    padding: 43px 20px;
-    background: $mainColor4;
+  height: 380px;
+  padding: 40px;
+  background: $mainColor4;
+  position: relative;
+  transform: translate(0, -50%);
+  margin-bottom: -160px;
+  &__title {
+    font-family: raleway;
+    font-size: 46px;
     color: $white;
-
-    position: relative;
-
-    h1 {
-      @include fs(36);
-      font-family: MerriweatherBold;
-      color: #fff;
-    }
-    h4 {
-      @include fs(16);
-      font-family: MerriweatherRegular;
-      color: #fff;
-    }
-
-    &-splash {
-      height: 100%;
-      width: 75px;
-
-      position: absolute;
-      right: -75px;
-      bottom: 0;
-
-      clip-path: polygon(0 0, 0% 100%, 100% 100%);
-      background-color: $mainColor4;
+    margin-bottom: 5px;
+  }
+  &__subtitle {
+    font-family: raleway_thin;
+    font-size: 20px;
+    color: $white;
+    margin-bottom: 25px;
+  }
+  &__content {
+    line-height: 1.5;
+    .content__item {
+      width: 100%;
+      display: flex;
+      justify-items: flex-start;
+      align-items: center;
+      span,
+      div {
+        color: $white;
+        font-size: 18px;
+        font-family: raleway-thin;
+        display: inline-block;
+      }
+      .item__icon {
+        margin-right: 10px;
+        line-height: 2px;
+      }
     }
   }
-  &__right {
+  &__img {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 40%;
+    height: 100%;
+  }
+  .img__wrap {
     width: 100%;
-    height: 371px;
-    background: url("../../assets/images/profile.jpg") center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
+    position: relative;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    .splash {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30%;
+      height: 100%;
+      background-color: $mainColor4;
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }
   }
 }
+
 .left-link {
   margin-top: 20px;
-
   div {
     &:not(:last-child) {
       margin-bottom: 5px;
@@ -95,7 +116,6 @@
     span {
       color: #fff;
       font-size: 20px;
-
       &:first-child {
         font-size: 1.2em;
         vertical-align: middle;
@@ -104,24 +124,29 @@
     }
   }
 }
+
+.box_hover:hover {
+  box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+}
+
 .social {
   margin-top: 15px;
-
   &-icon {
+    color: #fff;
     height: 35px;
     width: 35px;
     background: $mainColor1;
     display: inline-block;
     text-align: center;
     line-height: 40px;
-
     border-radius: 50%;
-
+    cursor: pointer;
     &:not(:first-child) {
-      margin-left: 10px;
+      margin-left: 15px;
     }
   }
 }
+
 .plus {
   border-radius: 50%;
   border: none;
@@ -130,16 +155,13 @@
   height: 60px;
   background: $mainColor1;
   color: $white;
-
   text-align: center;
-
   position: absolute;
   z-index: 2;
-  right: -10%;
+  left: 3%;
   top: 30%;
   transition: all 0.3s ease;
   cursor: pointer;
-
   svg {
     width: 60px;
     height: 60px;
@@ -152,10 +174,8 @@
 .about {
   width: 100%;
   height: auto;
-
   background: $white;
   box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
-
   &-wrap {
     max-width: 100%;
     p {
@@ -167,7 +187,6 @@
       color: $textGray;
     }
   }
-
   &-text {
     padding: 30px 35px;
     width: 100%;
@@ -175,15 +194,12 @@
   &-cv {
     border-top: 1px solid #ccc;
     padding: 30px 0px;
-
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
 
-.education {
-}
 .timeline {
   width: 100%;
   height: 100%;
@@ -191,15 +207,12 @@
   &__title {
     font-size: 36px;
     margin: 25px 0px 45px 0;
-
     font-weight: bold;
     font-family: raleway;
     opacity: 0.5;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     &_icon {
       height: 60px;
       width: 60px;
@@ -207,10 +220,8 @@
       box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
       display: inline-block;
       position: relative;
-
       border-radius: 5px;
       margin-right: 15px;
-
       svg {
         position: absolute;
         top: 50%;
@@ -223,17 +234,13 @@
     width: 100%;
     max-width: 970px;
     height: 100%;
-
     position: relative;
-
     &:before {
       content: "";
       position: absolute;
       top: 0;
       left: 50%;
-
       transform: translate(50%, 0);
-
       width: 2px;
       height: 85%;
       background: $mainColor4;
@@ -249,7 +256,7 @@
     box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
     padding: 15px 25px;
     width: 44%;
-    border-left: 3px solid $mainColor8;
+    border-left: 3px solid $mainColor1;
     position: relative;
     margin: -10px 0;
     &.card-left:before {
@@ -271,20 +278,16 @@
       background: $mainColor3;
     }
   }
-
   &-circle {
     height: 50px;
     width: 50px;
-
     border-radius: 50%;
-    background-color: $mainColor7;
+    background-color: $mainColor4;
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: absolute;
     top: 5px;
-
     span {
       text-transform: uppercase;
       font-weight: bold;
@@ -293,10 +296,12 @@
     }
   }
 }
+
 .timeline-block.flex-end .timeline-circle {
   top: 5px;
   left: -86px;
 }
+
 .card {
   &__degree {
     font-size: 24px;
@@ -333,6 +338,7 @@
     }
   }
 }
+
 .title {
   max-width: 100%;
   padding: 10px;
@@ -340,34 +346,91 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   &-icon {
     display: inline-block;
     padding: 15px;
     border-radius: 5px;
     background: #fff;
     box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
-
     svg {
       width: 40px;
       height: 40px;
       color: $titleColor;
     }
   }
-
   &-text {
     font-size: 46px;
     text-transform: uppercase;
     margin-left: 15px;
-
     font-family: raleway;
     color: $titleColor;
   }
 }
+
 .skill {
-  @include quick-box(970, 500, 30px 10px, 5px);
-  background-color: $mainColor1;
+  @include quick-box(970, 332, 40px, 0px);
+  background-color: $mainColor4;
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__item {
+    display: flex;
+    flex: 0 0 33.33333%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    flex-direction: column;
+
+    .item__title {
+      font-size: 30px;
+      font-family: raleway_thin;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .skillbar {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      margin: 15px 0;
+      &__title {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        color: #fff;
+      }
+      &_process {
+        height: 4px;
+        width: 100%;
+        background-color: #05985a;
+        margin: 8px 0;
+        position: relative;
+        div {
+          content: "";
+          position: absolute;
+          height: 4px;
+          background-color: #fff;
+          left: 0;
+          top: 0;
+        }
+      }
+      &_percent {
+        position: absolute;
+        top: -20px;
+        right: 0;
+        color: #fff;
+      }
+    }
+  }
 }
+
 .experience {
   .timeline__inner {
     &::before {

@@ -1,7 +1,8 @@
 import { IoMailSharp } from "react-icons/io5";
 import { AiOutlineGlobal, AiFillSkype, AiFillPhone } from "react-icons/ai";
 import { MdPlace } from "react-icons/md";
-import { BsFacebook, BsSkype, BsGoogle, BsLinkedin } from "react-icons/bs";
+
+import { FaFacebookF, FaTwitter, FaGoogle, FaLinkedin } from "react-icons/fa";
 import { GiGraduateCap, GiEarthAfricaEurope } from "react-icons/gi";
 export const homeLink = [
   {
@@ -27,11 +28,12 @@ export const homeLink = [
 ];
 export const socialIcon = [
   {
-    icon: <BsFacebook />,
+    icon: <FaFacebookF />,
+    bg: "#3f51b5",
   },
-  { icon: <BsSkype /> },
-  { icon: <BsGoogle /> },
-  { icon: <BsLinkedin /> },
+  { icon: <FaTwitter />, bg: "#2196f3" },
+  { icon: <FaGoogle />, bg: "#f44336" },
+  { icon: <FaLinkedin />, bg: "#1565c0" },
 ];
 
 export const educationData = [
@@ -152,6 +154,72 @@ export const experienceData = [
         time: "Jan 2014 - Mar 2015",
         img: "http://trimatrixlab.com/store/flatrica/images/timeline/demo-gra.jpg",
         desc: "I have learned a great many things from participating in varsity football. It has changed my entire outlook on and attitude toward life. Before my freshman year at [high-school], I was shy, had low self-esteem and turned away from seemingly impossible challenges. Football has altered all of these qualities. On the first day of freshman practice, the team warmed up with a game of touch football. The players were split up and the game began. However",
+      },
+    ],
+  },
+];
+
+export const skillsData = [
+  {
+    title: "Professional",
+    skillbar: [
+      {
+        title: "HTML5",
+        percent: 90,
+      },
+      {
+        title: "CSS3",
+        percent: 90,
+      },
+      {
+        title: "Jquery",
+        percent: 90,
+      },
+      {
+        title: "PHP",
+        percent: 68,
+      },
+    ],
+  },
+  {
+    title: "Personal",
+    skillbar: [
+      {
+        title: "Communication",
+        percent: 80,
+      },
+      {
+        title: "Teamwork",
+        percent: 60,
+      },
+      {
+        title: "Creativity",
+        percent: 70,
+      },
+      {
+        title: "Dedication",
+        percent: 70,
+      },
+    ],
+  },
+  {
+    title: "Software",
+    skillbar: [
+      {
+        title: "Adobe Illustrator",
+        percent: 80,
+      },
+      {
+        title: "Adobe InDesign",
+        percent: 60,
+      },
+      {
+        title: "PHP Storm",
+        percent: 70,
+      },
+      {
+        title: "Dev Console",
+        percent: 70,
       },
     ],
   },
