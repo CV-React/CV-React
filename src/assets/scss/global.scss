@@ -20,7 +20,32 @@
     opacity: 1;
   }
 }
-
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-70px);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(-130px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-70px) rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes fadeUp {
   0% {
     transform: translateY(60px) scale(0.7);
@@ -31,7 +56,41 @@
     opacity: 1;
   }
 }
-
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(36deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(108deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(252deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(324deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -94,4 +153,17 @@
 .animate_delay {
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
+}
+.spin {
+  animation: spin 5s both infinite linear;
+}
+.bounce-animation {
+  animation: bounce;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+.rotate-animation {
+  animation: bounce 1s ease infinite linear;
+  animation-duration: 1s;
 }

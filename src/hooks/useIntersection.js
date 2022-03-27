@@ -17,3 +17,7 @@ export const useIntersection = (element, rootMargin) => {
   }, []);
   return isVisible;
 };
+
+export const IsFadeUp = (object) => {
+  return useIntersection(object, "0px") ? "fadeUp" : "";
+};
