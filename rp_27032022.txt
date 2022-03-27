@@ -1,0 +1,23 @@
+// Weekly Status Report 
+
+To: Mr.Toan
+From: Thien Tran
+Week End: 27/03/2022
+
+Current week activities completed
+    1: Create repository on git : CV - React and invite you to view.
+    2: Create Project name CV-React, setting up a lots and make it run.
+    3: Layout Banner Section, About Section, Education Section, Skill Section and Experience Section.
+    4: Learn how to use SCSS on react project.
+    5: Layout Loading Screen.
+    6: Add fade effect to some element.
+Activities in process:
+    1: Layout popup when click ' ... ' in Education Section and Experience Section
+    2: Doing the rest of the layout.
+Issues Activities
+    1: What is the ideal of the animation of loading screen ? I mean how to make the square rotate after translateY like sample page.
+    2: What is the best way to make change main color on React Js.
+Last week completed activities :
+    None
+
+
