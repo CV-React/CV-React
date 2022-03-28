@@ -1,18 +1,18 @@
 import React from "react";
 
-const Skill = ({ data }) => {
+const Skill = ({ skillData }) => {
   return (
     <div className="skill__wrap">
-      {data.map((skill, i) => (
-        <div key={i} className="skill__item">
+      {skillData.map((skill, index) => (
+        <div key={index} className="skill__item">
           <h3 className="item__title text--shadow">{skill.title}</h3>
-          {skill.skillbar.map((skillbar, j) => (
-            <div key={j} className="skillbar">
-              <div className="skillbar__title">{skillbar.title}</div>
-              <div className="skillbar_process">
-                <div style={{ width: `${skillbar.percent}%` }}></div>
+          {skill.skillBar.map((skillBar, index1) => (
+            <div key={index1} className="skillBar">
+              <div className="skillBar__title">{skillBar.title}</div>
+              <div className="skillBar_process">
+                <div style={{ width: `${skillBar.percent}%` }}></div>
               </div>
-              <div className="skillbar_percent">{skillbar.percent}%</div>
+              <div className="skillBar_percent">{skillBar.percent}%</div>
             </div>
           ))}
         </div>

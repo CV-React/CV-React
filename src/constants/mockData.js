@@ -4,7 +4,7 @@ import { MdPlace } from "react-icons/md";
 
 import { FaFacebookF, FaTwitter, FaGoogle, FaLinkedin } from "react-icons/fa";
 import { GiGraduateCap, GiEarthAfricaEurope } from "react-icons/gi";
-export const homeLink = [
+export const ownerDetail = [
   {
     icon: <IoMailSharp />,
     data: "job.tranthien@gmail.com",
@@ -26,7 +26,7 @@ export const homeLink = [
     data: "286a Ta Quang Buu Street, Ward 4, District 8, Ho Chi Minh city",
   },
 ];
-export const socialIcon = [
+export const socials = [
   {
     icon: <FaFacebookF />,
     bg: "#3f51b5",
@@ -162,7 +162,7 @@ export const experienceData = [
 export const skillsData = [
   {
     title: "Professional",
-    skillbar: [
+    skillBar: [
       {
         title: "HTML5",
         percent: 90,
@@ -183,7 +183,7 @@ export const skillsData = [
   },
   {
     title: "Personal",
-    skillbar: [
+    skillBar: [
       {
         title: "Communication",
         percent: 80,
@@ -204,7 +204,7 @@ export const skillsData = [
   },
   {
     title: "Software",
-    skillbar: [
+    skillBar: [
       {
         title: "Adobe Illustrator",
         percent: 80,

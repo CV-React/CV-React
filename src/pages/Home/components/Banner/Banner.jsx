@@ -1,51 +1,47 @@
-import React, { useRef } from "react";
+import React from "react";
 import { GoPlusSmall } from "react-icons/go";
 import { avatar } from "assets/images";
-import { useIntersection } from "hooks/useIntersection";
-const Banner = ({ homeLink, socialIcon }) => {
-  const banner = useRef();
-  const animated = useRef();
+const Banner = ({ ownerDetail, socials }) => {
   return (
-    <div
-      ref={banner}
-      className={`quick-profile animated 
-    ${useIntersection(banner, "0px") ? "fadeUpBanner" : ""}`}
-    >
-      <h3 className="quick-profile__title text--shadow ">Thien Tran</h3>
-      <h5
-        ref={animated}
-        className="quick-profile__subtitle text_white text--shadow "
-      >
-        Software engineer & Web developer
-      </h5>
-      <div className="quick-profile__content">
-        {homeLink?.map((item, i) => (
-          <div className="content__item" key={i}>
-            <div className="item__icon">{item.icon}</div>
-            <span className="item__text">{item.data}</span>
+    <div className="quick-profile">
+      <div className="quick-profile__container">
+        <h3 className="owner__title text__shadow ">Thien Tran</h3>
+        <h5 className="owner__subtitle text__white text__shadow ">
+          Software engineer & Web developer
+        </h5>
+        <div className="quick-profile__detail">
+          <div className="detail__wrap">
+            {ownerDetail &&
+              ownerDetail.map((item, index) => (
+                <div className="detail__item" key={index}>
+                  <div className="item__icon">{item.icon}</div>
+                  <span className="item__text">{item.data}</span>
+                </div>
+              ))}
           </div>
-        ))}
-        <div className="content__link ">
-          <div className="social">
-            {socialIcon?.map((e, i) => (
-              <span
-                style={{ background: `${e.bg}` }}
-                className="social-icon box_hover animated"
-                key={i}
-              >
-                {e.icon}
-              </span>
-            ))}
+          <div className="content__link ">
+            <div className="social__wrap">
+              {socials &&
+                socials.map((social, index) => (
+                  <span
+                    style={{ background: `${social.bg}` }}
+                    className="social__item box__hover"
+                    key={index}
+                  >
+                    {social.icon}
+                  </span>
+                ))}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="quick-profile__img img">
-        <span onClick={() => alert("hello")} className="plus">
-          <GoPlusSmall />
-        </span>
-        <div className="img__wrap">
-          <img src={avatar} alt="avatar" />
-          <div className="splash"></div>
+        <div className="quick-profile__img">
+          <span onClick={() => alert("hello")} className="plus">
+            <GoPlusSmall />
+          </span>
+          <div className="img__wrap">
+            <img src={avatar} alt="avatar" />
+            <div className="splash"></div>
+          </div>
         </div>
       </div>
     </div>

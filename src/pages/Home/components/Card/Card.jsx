@@ -1,20 +1,6 @@
-import React, { useRef } from "react";
-import { IsFadeUp } from "hooks/useIntersection";
-
-const TimeLine = ({ data }) => {
-  return (
-    <div className="timeline">
-      <div className="timeline__inner">
-        {data?.map((edu, i) => (
-          <Card index={i} key={i} data={edu} />
-        ))}
-      </div>
-    </div>
-  );
-};
+import "./Card.scss";
 
 const Card = ({ data, index }) => {
-  const animated = useRef();
   const { degree, schoolName, time, desc, icon } = data;
   const isRight = () => {
     if (index % 2 === 0) return true;
@@ -22,17 +8,8 @@ const Card = ({ data, index }) => {
   };
   return (
     <div className={`timeline__block ${isRight() ? "flex-start" : "flex-end"}`}>
-      <div
-        ref={animated}
-        className={`timeline__card animated ${IsFadeUp(animated)} card ${
-          isRight() ? "card-left" : "card-right"
-        }`}
-      >
-        <div
-          ref={animated}
-          className={`timeline-circle animated  ${IsFadeUp(animated)}`}
-          style={isRight() ? { right: -85 } : { left: -84 }}
-        >
+      <div className={`timeline__card animated`}>
+        <div className={`timeline-circle animated `}>
           <span>{icon}</span>
         </div>
         <div className="card__degree">
@@ -58,5 +35,4 @@ const Card = ({ data, index }) => {
     </div>
   );
 };
-
-export default TimeLine;
+export default Card;
