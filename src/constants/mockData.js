@@ -1,6 +1,6 @@
 import { IoMailSharp } from "react-icons/io5";
-import { AiOutlineGlobal, AiFillSkype, AiFillPhone } from "react-icons/ai";
-import { MdPlace } from "react-icons/md";
+import { AiOutlineGlobal, AiFillSkype } from "react-icons/ai";
+import { MdPlace, MdPhone } from "react-icons/md";
 
 import { FaFacebookF, FaTwitter, FaGoogle, FaLinkedin } from "react-icons/fa";
 import { GiGraduateCap, GiEarthAfricaEurope } from "react-icons/gi";
@@ -18,7 +18,7 @@ export const ownerDetail = [
     data: "tranthien@skype.com",
   },
   {
-    icon: <AiFillPhone />,
+    icon: <MdPhone />,
     data: "+84 913184232",
   },
   {
@@ -30,10 +30,11 @@ export const socials = [
   {
     icon: <FaFacebookF />,
     bg: "#3f51b5",
+    link: "#",
   },
-  { icon: <FaTwitter />, bg: "#2196f3" },
-  { icon: <FaGoogle />, bg: "#f44336" },
-  { icon: <FaLinkedin />, bg: "#1565c0" },
+  { icon: <FaTwitter />, bg: "#2196f3", link: "#" },
+  { icon: <FaGoogle />, bg: "#f44336", link: "#" },
+  { icon: <FaLinkedin />, bg: "#1565c0", link: "#" },
 ];
 
 export const educationData = [

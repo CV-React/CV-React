@@ -4,23 +4,23 @@ import {
   Banner,
   Education,
   Experience,
+  HeaderBg,
   Setting,
   Skill,
 } from "./components";
 const Home = () => {
   return (
-    <div className="home">
-      <div className="container">
-        {/* <Menu /> */}
-        <Setting />
-        <Banner />
-        <About />
-        <Education />
-        <Skill />
-        <Experience />
-        {/* <Portfolio /> */}
-      </div>
-    </div>
+    <>
+      {/* <Menu /> */}
+      <HeaderBg />
+      {/* <Setting /> */}
+      <Banner />
+      <About />
+      {/* <Education /> */}
+      {/* <Skill /> */}
+      {/* <Experience />  */}
+      {/* <Portfolio /> */}
+    </>
   );
 };
 
