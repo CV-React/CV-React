@@ -16,12 +16,12 @@ const About = () => {
         </div>
         <div className="about__link">
           <a href="/cv2.pdf" target={"_blank"} rel="noreferrer">
-            <button type="button" className="box__hover btn btn__primary">
+            <button type="button" className="box__hover btn about__btn">
               DOWNLOAD CV
             </button>
           </a>
           <a href="mailto:work.tranthien@gmail.com">
-            <button type="button" className="box__hover btn btn__primary">
+            <button type="button" className="box__hover btn about__btn">
               CONTACT ME
             </button>
           </a>

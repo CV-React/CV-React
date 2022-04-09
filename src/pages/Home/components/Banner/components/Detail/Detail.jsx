@@ -1,8 +1,9 @@
 import React from "react";
-import { ownerDetail } from "constants/mockData";
+import { mockData } from "constants/mockData";
 import "./Detail.scss";
 
 const Detail = () => {
+  const { ownerDetail } = mockData;
   return (
     <div className="detail__wrap">
       {ownerDetail &&

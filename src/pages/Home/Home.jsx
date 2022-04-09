@@ -5,9 +5,15 @@ import {
   Education,
   Experience,
   HeaderBg,
+  Interest,
   Setting,
   Skill,
+  Pricing,
+  Blog,
 } from "./components";
+
+import "../../index.scss";
+
 const Home = () => {
   return (
     <>
@@ -16,10 +22,14 @@ const Home = () => {
       {/* <Setting /> */}
       <Banner />
       <About />
-      {/* <Education /> */}
-      {/* <Skill /> */}
-      {/* <Experience />  */}
+      <Education />
+      <Skill />
+      <Experience />
       {/* <Portfolio /> */}
+      <Interest />
+      {/* <Testimonials /> */}
+      <Pricing />
+      <Blog />
     </>
   );
 };
