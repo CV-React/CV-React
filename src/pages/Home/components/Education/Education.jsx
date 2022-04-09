@@ -1,14 +1,20 @@
-import React from "react";
-import { Card } from "../Card";
+import { mockData } from "constants/mockData";
+import { book } from "assets/images";
 import "./Education.scss";
+import Card from "../Card/Card";
+import { SectionTitle } from "components";
 
-const Education = ({ educationData }) => {
+const Education = () => {
+  const { educationData } = mockData;
   return (
-    <div className="education">
-      <div className="education__container">
-        {educationData?.map((edu, index) => (
-          <Card index={index} key={index} data={edu} />
-        ))}
+    <div id="education" className="education section">
+      <div className="container">
+        <SectionTitle title="Education" icon={book} />
+        <div className="timeline__education">
+          {educationData?.map((edu, index) => (
+            <Card key={index} data={edu} />
+          ))}
+        </div>
       </div>
     </div>
   );

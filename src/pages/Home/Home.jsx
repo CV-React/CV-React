@@ -1,3 +1,4 @@
+import { ColorPalate, Header, ScrollUp } from "components";
 import React from "react";
 import {
   About,
@@ -5,21 +6,31 @@ import {
   Education,
   Experience,
   HeaderBg,
-  Setting,
+  Interest,
   Skill,
+  Pricing,
+  Blog,
+  Contact,
 } from "./components";
+
 const Home = () => {
   return (
     <>
-      {/* <Menu /> */}
+      <Header />
       <HeaderBg />
-      {/* <Setting /> */}
       <Banner />
       <About />
-      {/* <Education /> */}
-      {/* <Skill /> */}
-      {/* <Experience />  */}
+      <Education />
+      <Skill />
+      <Experience />
       {/* <Portfolio /> */}
+      <Interest />
+      {/* <Testimonials /> */}
+      <Pricing />
+      <Blog />
+      <Contact />
+      <ScrollUp />
+      <ColorPalate />
     </>
   );
 };

@@ -1,13 +1,12 @@
 import React from "react";
-
 import { avatar } from "assets/images";
-import "./Banner.scss";
 import { Detail, PlusButton, Social } from "./components";
 import { Image, OwnerTitle } from "components";
+import "./Banner.scss";
 
-const Banner = ({ ownerDetail, socials }) => {
+const Banner = () => {
   return (
-    <section className="section__banner">
+    <section id="banner" className="banner animated animateBanner">
       <div className="container">
         <div className="quick-profile">
           <div className="quick-profile__detail">

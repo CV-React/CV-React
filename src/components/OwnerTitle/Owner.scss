@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@import "assets/scss";
 .owner {
   &__title {
     display: block;
@@ -23,5 +23,6 @@
 
     @include fs(19);
     margin-bottom: 25px;
+    font-family: raleway_thin;
   }
 }
