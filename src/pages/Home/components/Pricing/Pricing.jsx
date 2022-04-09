@@ -8,7 +8,7 @@ import { SectionTitle } from "components";
 const Pricing = () => {
   const { pricing } = mockData;
   return (
-    <section id="pricing" className="section">
+    <section id="pricing" className="section animated">
       <div className="container">
         <SectionTitle title="Pricing" icon={lightning} />
         <div className="pricing__wrap">

@@ -68,7 +68,7 @@
         &__field,
         &__name {
           border-bottom: 1px solid gainsboro;
-          color: $mainColor1;
+          color: var(--secondary-color);
         }
 
         &__working {
@@ -95,7 +95,7 @@
 
       .readMore {
         a {
-          color: $mainColor1;
+          color: var(--secondary-color);
           text-decoration: none;
           border-bottom: 1px solid gainsboro;
         }

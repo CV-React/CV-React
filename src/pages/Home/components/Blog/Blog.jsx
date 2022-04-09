@@ -7,7 +7,7 @@ import { SectionTitle } from "components";
 const Blog = () => {
   const { blogs } = mockData;
   return (
-    <section id="blog" className="section">
+    <section id="blog" className="section animated">
       <div className="container">
         <SectionTitle title="blog" icon={blogIcon} />
         <div className="blog">

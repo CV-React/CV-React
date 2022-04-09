@@ -35,12 +35,12 @@
     @include flex(center, center);
     flex-direction: column;
     height: 100px;
-    background: $mainColor4;
+    background: var(--main-color);
     color: #fff;
 
     &:nth-child(even) {
       background: #fff;
-      color: $mainColor4;
+      color: var(--main-color);
     }
 
     span {

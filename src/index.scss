@@ -20,6 +20,13 @@ h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+a {
+  text-decoration: none;
+}
+
+.App {
+  display: none;
+}
 
 .btn {
   display: inline-block;
@@ -51,44 +58,15 @@ h6 {
 
   &--primary {
     color: #fff;
-    background-color: $mainColor4;
-    border-color: $mainColor4;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
   }
 }
 
-.animated {
-  @include animated;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  opacity: 0;
-}
-
-.fadeUp {
-  -webkit-animation-name: fadeUp;
-  animation-name: fadeUp;
-}
-
-.fadeUpBanner {
-  -webkit-animation-name: fadeUpBanner;
-  animation-name: fadeUpBanner;
-}
-
-.animate_delay {
-  animation-delay: 0.4s;
-  -webkit-animation-delay: 0.4s;
-}
 .spin {
   animation: spin 5s both infinite linear;
   -webkit-animation: spin 5s both infinite linear;
 }
-// .bounce-animation {
-//   animation: bounce 2s linear;
-//   -webkit-animation: bounce 2s linear;
-// }
-// .rotate-animation {
-//   animation: bounce 1s ease infinite linear;
-//   animation-duration: 1s;
-// }
 
 .container {
   padding-right: 15px;
@@ -114,6 +92,32 @@ h6 {
   }
 }
 
+.animated {
+  @include animated;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+.loadingAnimate {
+  @include animated;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.fade {
+  -webkit-animation-name: fadeUp;
+  animation-name: fadeUp;
+}
+
+.fadeBanner {
+  -webkit-animation-name: fadeUpBanner;
+  animation-name: fadeUpBanner;
+}
+
+.animate_delay {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
 .text {
   &__uppercase {
     text-transform: uppercase;
@@ -125,6 +129,26 @@ h6 {
 
   &__white {
     color: #fff;
+  }
+
+  &__holder {
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    top: 62%;
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgb(0 0 0 / 29%);
+    }
+
+    h6 {
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgb(0 0 0 / 29%);
+    }
   }
 }
 
@@ -151,4 +175,24 @@ h6 {
       margin: -2px 12px 12px 12px;
     }
   }
+}
+
+#scrollUp {
+  color: #fff;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 2;
+  background: #1976d2;
+  border: 1px solid #1976d2;
+  text-align: center;
+  position: fixed;
+  bottom: 21px;
+  right: 18px;
+  z-index: 5;
+  box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
 }

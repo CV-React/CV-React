@@ -1,3 +1,4 @@
+import { ColorPalate, Header, ScrollUp } from "components";
 import React from "react";
 import {
   About,
@@ -15,9 +16,8 @@ import {
 const Home = () => {
   return (
     <>
-      {/* <Menu /> */}
+      <Header />
       <HeaderBg />
-      {/* <Setting /> */}
       <Banner />
       <About />
       <Education />
@@ -29,6 +29,8 @@ const Home = () => {
       <Pricing />
       <Blog />
       <Contact />
+      <ScrollUp />
+      <ColorPalate />
     </>
   );
 };

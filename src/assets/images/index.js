@@ -10,3 +10,4 @@ export const blog1 = require("./blog-1.png");
 export const blog2 = require("./blog-2.png");
 export const blog3 = require("./blog-3.png");
 export const envelope = require("./envelope.png");
+export const logo = require("./logo1.png");

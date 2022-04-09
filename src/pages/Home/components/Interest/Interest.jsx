@@ -8,7 +8,7 @@ const Interest = () => {
   const { interest } = mockData;
 
   return (
-    <section id="interest" className="section">
+    <section id="interest" className="section animated">
       <div className="container">
         <SectionTitle title="Interest" icon={heart} />
         <div className="interest__wrap">
@@ -22,7 +22,7 @@ const Interest = () => {
             </p>
           </div>
           <div className="wrap__enjoy">
-            <div className="enjoy__list">
+            <div className="enjoy__list animated animate_delay">
               {interest.map((data, index) => (
                 <Enjoy key={index} data={data} />
               ))}

@@ -6,10 +6,10 @@ const Card = ({ data }) => {
 
   return (
     <div className="timeline__block">
-      <div className="timeline__dot">
+      <div className="timeline__dot animated">
         <h6>{icon}</h6>
       </div>
-      <div className="timeline__content card">
+      <div className="timeline__content animated card">
         <div className="card__content">
           <h6 className="timeline__title">{degree}</h6>
           <div className="timeline__info">
