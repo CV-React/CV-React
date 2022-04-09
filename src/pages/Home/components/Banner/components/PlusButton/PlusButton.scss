@@ -1,0 +1,30 @@
+@import "assets/scss";
+
+.plus {
+  position: absolute;
+  background-color: var(--secondary-color);
+  top: 20%;
+  right: 86%;
+  width: 55.5px;
+  height: 55.5px;
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 2;
+  cursor: pointer;
+
+  @include flex(center, center);
+  @include boxShadow;
+
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+
+    path {
+      color: #fff;
+    }
+  }
+}

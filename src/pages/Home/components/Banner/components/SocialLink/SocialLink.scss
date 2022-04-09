@@ -1,0 +1,36 @@
+@import "assets/scss";
+
+.social {
+  max-width: 515px;
+
+  &__wrap {
+    display: inline-block;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    margin-right: 12px;
+
+    .item__wrap {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include boxShadow;
+
+      &:hover {
+        @include boxShadowHover;
+      }
+
+      svg {
+        height: 15px;
+        color: #fff;
+      }
+    }
+  }
+}

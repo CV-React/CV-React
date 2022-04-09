@@ -1,0 +1,56 @@
+@import "assets/scss";
+
+.interest__wrap {
+  background-color: #fff;
+  margin-top: 35px;
+  @include boxShadow;
+}
+
+.wrap__content {
+  @include flex(center, center);
+  height: 145px;
+  padding: 0 40px;
+
+  p {
+    font-size: 15px;
+    color: $textColor;
+    text-align: center;
+    line-height: 1.429;
+    font-family: muli, sans-serif;
+  }
+}
+
+.enjoy {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    @include flex(center, center);
+    flex-direction: column;
+    height: 100px;
+    background: var(--main-color);
+    color: #fff;
+
+    &:nth-child(even) {
+      background: #fff;
+      color: var(--main-color);
+    }
+
+    span {
+      font-size: 15px;
+      line-height: 1.429;
+      text-transform: capitalize;
+    }
+
+    i {
+      font-size: 35.2px;
+    }
+  }
+}

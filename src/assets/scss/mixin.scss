@@ -1,65 +1,65 @@
 // Limit the number of lines that text can display
 @mixin text-clamp($value) {
-    word-break: break-all;
-    display: -webkit-box;
-    -webkit-line-clamp: $value;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: break-word;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 
 // Flex which can have choose justify-content and align-items
 @mixin flex($justify, $align) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
 }
-
+@mixin boxShadow {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+@mixin boxShadowHover {
+  box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+}
 // Quick generate a box
 @mixin quick-box($width, $height, $padding, $borderRadius) {
-    padding: $padding;
-    border-radius: $borderRadius;
-    @if $width>0 {
-        width: #{$width}px;
-    }
-    @else {
-        width: 100px;
-    }
-    @if $height>0 {
-        height: #{$height}px;
-    }
-    @else {
-        height: 100px;
-    }
+  padding: $padding;
+  border-radius: $borderRadius;
+  @if $width>0 {
+    width: #{$width}px;
+  } @else {
+    width: 100px;
+  }
+  @if $height>0 {
+    height: #{$height}px;
+  } @else {
+    height: 100px;
+  }
 }
 
 // convert fontSize from px to em
 @mixin fs($fs, $base: 16) {
-    font-size: #{$fs / $base}em;
+  font-size: #{$fs / $base}em;
 }
 
 // Init font face mixin
 @mixin font-face($fontFamilyName, $fontName, $fontWeight) {
-    @font-face {
-        font-family: "#{$fontFamilyName}";
-        src: url("../fonts/#{$fontName}.ttf") format("opentype");
-    }
-    @if $fontWeight==bold {
-        font-weight: normal;
-        font-style: normal;
-    }
-    @else if $fontWeight==bolder {
-        font-weight: normal;
-        font-style: normal;
-    }
-    @else if type-of($fontWeight)=="number" {
-        font-weight: normal;
-        font-style: normal;
-    }
+  @font-face {
+    font-family: "#{$fontFamilyName}";
+    src: url("../fonts/#{$fontName}.ttf") format("opentype");
+  }
+  @if $fontWeight==bold {
+    font-weight: normal;
+    font-style: normal;
+  } @else if $fontWeight==bolder {
+    font-weight: normal;
+    font-style: normal;
+  } @else if type-of($fontWeight) == "number" {
+    font-weight: normal;
+    font-style: normal;
+  }
 }
-
 @mixin animated {
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
 }

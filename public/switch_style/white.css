@@ -1,0 +1,16 @@
+:root {
+  --main-color: #06a763;
+  --secondary-color: #1976d2;
+}
+.banner .quick-profile {
+  background: #f5f5f5 !important;
+}
+.banner .quick-profile__img .splash {
+  border-color: rgba(223, 50, 50, 0) transparent transparent #f5f5f5 !important;
+}
+.owner__title,
+.owner__subTitle,
+.detail__wrap .detail__item .item__icon svg,
+.detail__wrap .detail__item .item__text {
+  color: #616161 !important;
+}
