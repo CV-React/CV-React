@@ -11,6 +11,7 @@
   &__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 100%;
 
     .item__image {
       font-family: muli, sans-serif;
@@ -26,13 +27,14 @@
 
         img {
           transition: 0.3s ease-in-out;
+          height: 315px;
         }
 
-        &:hover .image__infos {
+        &:hover .image__info {
           bottom: 10px;
         }
 
-        .image__infos {
+        .image__info {
           display: flex;
           color: white;
           position: absolute;
@@ -73,6 +75,7 @@
           color: $textColor;
         }
       }
+
       .description {
         p:first-child {
           font-weight: 500;

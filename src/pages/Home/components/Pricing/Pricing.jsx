@@ -3,18 +3,14 @@ import { lightning } from "assets/images";
 import { mockData } from "constants/mockData";
 import PricingItem from "./PricingItem/PricingItem";
 import "./Pricing.scss";
+import { SectionTitle } from "components";
 
 const Pricing = () => {
   const { pricing } = mockData;
   return (
     <section id="pricing" className="section">
       <div className="container">
-        <div className="section__title">
-          <h4 className="text__uppercase text__center">
-            <img src={lightning} alt="demo" />
-            Pricing
-          </h4>
-        </div>
+        <SectionTitle title="Pricing" icon={lightning} />
         <div className="pricing__wrap">
           {pricing.map((data, index) => (
             <PricingItem key={index} data={data} />

@@ -6,7 +6,7 @@ import "./Banner.scss";
 
 const Banner = () => {
   return (
-    <section className="section__banner">
+    <section id="banner" className="banner">
       <div className="container">
         <div className="quick-profile">
           <div className="quick-profile__detail">

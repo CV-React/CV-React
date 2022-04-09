@@ -2,18 +2,15 @@ import { heart } from "assets/images";
 import "./Interest.scss";
 import { mockData } from "constants/mockData";
 import Enjoy from "./Enjoy/Enjoy";
+import { SectionTitle } from "components";
 
 const Interest = () => {
   const { interest } = mockData;
+
   return (
     <section id="interest" className="section">
       <div className="container">
-        <div className="section__title">
-          <h4 className="text__uppercase text__center">
-            <img src={heart} alt="demo" />
-            Interest
-          </h4>
-        </div>
+        <SectionTitle title="Interest" icon={heart} />
         <div className="interest__wrap">
           <div className="wrap__content">
             <p>
@@ -27,13 +24,7 @@ const Interest = () => {
           <div className="wrap__enjoy">
             <div className="enjoy__list">
               {interest.map((data, index) => (
-                <Enjoy
-                  bgColor={index % 2 === 0 ? "#06a763" : "#fff"}
-                  color={index % 2 === 0 ? "#fff" : "#06a763"}
-                  key={index}
-                  icon={data.icon}
-                  name={data.name}
-                />
+                <Enjoy key={index} data={data} />
               ))}
             </div>
           </div>

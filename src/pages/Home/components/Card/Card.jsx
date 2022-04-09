@@ -1,5 +1,6 @@
 import "./Card.scss";
 import "../../Home.scss";
+
 const Card = ({ data }) => {
   const { degree, schoolName, time, desc, icon } = data;
 

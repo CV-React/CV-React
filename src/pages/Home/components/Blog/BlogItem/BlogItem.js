@@ -1,13 +1,14 @@
+import { Image } from "components";
 import React from "react";
 
 const BlogItem = ({ data, flip }) => {
   const { image, fieldWork, jobName, work, workTitle, workDescription } = data;
   return (
-    <div className={`blog__item ${flip}`}>
+    <div className={flip ? "blog__item flip" : "blog__item"}>
       <div className="item__image">
         <figure>
-          <img src={image} alt="Blog Images" />
-          <div className="image__infos">
+          <Image src={image} alt="Blog Images" />
+          <div className="image__info">
             <div className="user">
               <i className="fa fa-user"></i> John Doe
             </div>
@@ -22,15 +23,14 @@ const BlogItem = ({ data, flip }) => {
       </div>
       <div className="item__content">
         <div className="job">
-          s
           <p>
             <a className="job__field" href="#/" rel="noreferrer">
               {fieldWork}
-            </a>{" "}
-            /{" "}
+            </a>
+            /
             <a className="job__name" href="#/" rel="noreferrer">
               {jobName}
-            </a>{" "}
+            </a>
             / <span className="job__working">{work}</span>
           </p>
         </div>

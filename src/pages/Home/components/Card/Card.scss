@@ -1,12 +1,13 @@
-@import "../../../../assets/scss/vars.scss";
+@import "assets/scss";
+
 .card {
   position: relative;
   background-color: #fff;
-  transition: box-shadow 0.25s;
-  -webkit-transition: box-shadow 0.25s;
   border-radius: 0 !important;
   margin: 8px 0;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  @include boxShadow;
+  transition: box-shadow 0.25s;
+  -webkit-transition: box-shadow 0.25s;
 
   @media only screen and (min-width: 768px) {
     width: 44%;

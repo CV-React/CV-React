@@ -1,5 +1,4 @@
 import React from "react";
-import "index.scss";
 import "./Owner.scss";
 const Owner = () => {
   return (

@@ -6,13 +6,11 @@ import {
   Experience,
   HeaderBg,
   Interest,
-  Setting,
   Skill,
   Pricing,
   Blog,
+  Contact,
 } from "./components";
-
-import "../../index.scss";
 
 const Home = () => {
   return (
@@ -30,6 +28,7 @@ const Home = () => {
       {/* <Testimonials /> */}
       <Pricing />
       <Blog />
+      <Contact />
     </>
   );
 };

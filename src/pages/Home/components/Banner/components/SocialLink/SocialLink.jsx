@@ -1,6 +1,6 @@
 import { mockData } from "constants/mockData";
 import React from "react";
-import "index.scss";
+
 import "./SocialLink.scss";
 
 const SocialLink = () => {
