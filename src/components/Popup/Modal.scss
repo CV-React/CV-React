@@ -1,0 +1,71 @@
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 50%;
+  width: 900px;
+  -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: relative;
+
+  .header {
+    padding: 15px;
+    border-bottom: 0px;
+
+    h4 {
+      font-size: 2.18em;
+      font-family: ralewayMedium;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-family: ralewayThin;
+    }
+  }
+
+  .content {
+    position: relative;
+    padding: 0px 40px;
+    text-align: justify;
+
+    p {
+      margin-bottom: 30px;
+      font-size: 15px;
+      line-height: 1.429;
+      color: #757575;
+      font-family: muli, sans-serif;
+    }
+  }
+
+  img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .close {
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: ralewayBold;
+    opacity: 0.2;
+    transition: color 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+      color: var(--secondary-color);
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import "./Card.scss";
 import "../../Home.scss";
+import Modal from "components/Popup/Modal";
 
 const Card = ({ data }) => {
   const { degree, schoolName, time, desc, icon } = data;
@@ -23,9 +24,7 @@ const Card = ({ data }) => {
           <p>{desc}</p>
           {data.extra && (
             <div className="card__more">
-              <button type="button" onClick={() => alert("Hello")}>
-                ...
-              </button>
+              <Modal data={data.extra} />
             </div>
           )}
         </div>
