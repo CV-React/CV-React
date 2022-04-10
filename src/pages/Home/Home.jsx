@@ -12,6 +12,7 @@ import {
   Blog,
   Contact,
   Portfolio,
+  Testimonials,
 } from "./components";
 
 const Home = () => {
@@ -24,9 +25,9 @@ const Home = () => {
       <Education />
       <Skill />
       <Experience />
-      {/* <Portfolio /> */}
+      <Portfolio />
       <Interest />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Pricing />
       <Blog />
       <Contact />

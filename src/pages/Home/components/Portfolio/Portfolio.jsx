@@ -7,7 +7,7 @@ const Portfolio = () => {
     <section id="portfolios" className="section">
       <div className="container">
         <SectionTitle title="Portfolios" icon={safe} />
-        <div id="portfolios__card" className="row" data-sr-id="26">
+        {/* <div id="portfolios__card" className="row" data-sr-id="26">
           <ul className="nav nav__tabs">
             <li className="waves-effect list__shuffle active">
               <a
@@ -355,7 +355,7 @@ const Portfolio = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

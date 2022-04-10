@@ -1,5 +1,3 @@
-import "./SectionTitle.scss";
-
 const SectionTitle = ({ title, icon }) => {
   return (
     <div className="section__title">

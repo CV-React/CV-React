@@ -42,7 +42,7 @@ const Header = () => {
           <a href="#testimonials">
             <i className="title__icon fa fa-users"></i>Testimonials
           </a>
-          <a href="#pricing-table">
+          <a href="#pricing">
             <i className="title__icon fa-regular fa-money-bill-1"></i>Pricing
           </a>
           <a href="#blog">
