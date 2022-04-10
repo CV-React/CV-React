@@ -11,6 +11,7 @@ import {
   Pricing,
   Blog,
   Contact,
+  Portfolio,
 } from "./components";
 
 const Home = () => {

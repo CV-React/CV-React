@@ -7,5 +7,6 @@ export { default as HeaderBg } from "./HeaderBackground/HeaderBackground.jsx";
 export { default as Interest } from "./Interest/Interest";
 export { default as Pricing } from "./Pricing/Pricing";
 export { default as Blog } from "./Blog/Blog";
+export { default as Portfolio } from "./Portfolio/Portfolio";
 // export { default as Testimonials } from "./Testimonials/Testimonials";
 export { default as Contact } from "./Contact/Contact";
