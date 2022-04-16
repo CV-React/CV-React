@@ -45,7 +45,7 @@ export const mockData = {
     },
     {
       icon: <MdPlace />,
-      data: "286a Ta Quang Buu Street, Ward 4, District 8, Ho Chi Minh city",
+      data: "286a Ta Quang Buu Street",
     },
   ],
   socials: [

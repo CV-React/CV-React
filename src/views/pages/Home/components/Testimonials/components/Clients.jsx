@@ -17,6 +17,20 @@ const Clients = () => {
             speed={3000}
             loop={true}
             simulateTouch={false}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+              },
+              480: {
+                slidesPerView: 3,
+              },
+              640: {
+                slidesPerView: 5,
+              },
+              1024: {
+                slidesPerView: 7,
+              },
+            }}
           >
             {clients &&
               !!clients.length &&

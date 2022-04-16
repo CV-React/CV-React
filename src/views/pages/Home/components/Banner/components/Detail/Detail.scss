@@ -4,6 +4,20 @@
   max-width: 515px;
   margin-bottom: 10px;
 
+  @include desktop {
+    max-width: 278px
+  }
+
+  @include md {
+    max-width: 40%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto
+  }
+
   .detail__item {
     @include flex(flex-start, flex-start);
     margin-bottom: 5px;
@@ -30,6 +44,14 @@
       font-family: raleway_thin;
       font-weight: 400;
       font-size: 15px;
+
+      @include desktop {
+        margin-left: 10px;
+      }
+
+      @include md {
+        margin-left: 10px;
+      }
     }
   }
 }

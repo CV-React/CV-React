@@ -9,10 +9,24 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 
+    @include md {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: unset;
+      row-gap: 15px;
+    }
+
     .item {
       width: 303px;
       @include boxShadow;
       transition: 0.3s ease-in-out;
+
+      @include desktop__big {
+        width: 220px;
+      }
+
+      @include md {
+        width: 100%;
+      }
 
       &:hover {
         transform: scale(1.03);
@@ -31,6 +45,7 @@
 
         .price {
           position: relative;
+
           .price__text {
             span:first-child {
               position: absolute;

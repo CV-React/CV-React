@@ -34,6 +34,10 @@
           margin-left: auto;
         }
       }
+
+      .swiper-wrapper {
+        padding-bottom: 20px;
+      }
     }
 
     blockquote {
@@ -57,11 +61,16 @@
     margin-top: 20px;
     display: block;
 
+    .card {
+      @include boxShadow;
+    }
+
     &__wrap {
       display: block;
       overflow: hidden;
       padding: 10px 0 0;
       margin-top: -12px;
+
 
       .swiper-slide {
         width: 140px;
@@ -70,6 +79,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include desktop {
+          height: 65px;
+        }
 
         img {
           vertical-align: middle;

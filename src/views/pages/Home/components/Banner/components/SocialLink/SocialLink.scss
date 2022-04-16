@@ -3,6 +3,11 @@
 .social {
   max-width: 515px;
 
+  @include md {
+    max-width: unset;
+    margin-top: 20px;
+  }
+
   &__wrap {
     display: inline-block;
   }

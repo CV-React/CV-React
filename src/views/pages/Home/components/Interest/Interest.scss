@@ -8,8 +8,8 @@
 
 .wrap__content {
   @include flex(center, center);
-  height: 145px;
-  padding: 0 40px;
+  height: auto;
+  padding: 40px;
 
   p {
     font-size: 15px;
@@ -26,8 +26,14 @@
     grid-template-columns: repeat(6, 1fr);
     text-align: center;
 
-    @media only screen and (max-width: 768px) {
+
+
+    @include md {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include sp {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

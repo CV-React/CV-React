@@ -53,7 +53,7 @@ const Portfolio = () => {
                   <button
                     key={index}
                     onClick={handleClick}
-                    className={data === filter ? "btn active" : "btn"}
+                    className={data === filter ? "navBtn active" : "navBtn"}
                   >
                     {data}
                   </button>

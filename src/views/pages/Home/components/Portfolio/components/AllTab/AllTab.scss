@@ -106,17 +106,21 @@
             opacity: 0;
 
             .text__center {
-                transition: transform 0.35s ease 0s, color 0.35s ease 0s;
-                transform: translate3d(0px, -50%, 0px);
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
             }
 
             &:hover {
                 opacity: 1;
 
                 .text__center {
-                    transform: translate3d(0px, -50%, 0px) translate3d(0px, -40px, 0px);
-                    transition: 0.3s ease-in-out;
+                    transform: translate3d(0px, -50%, 0px);
+
                     opacity: 1;
+                }
+
+                .item__description {
+                    transform: scale(1);
                 }
             }
 
@@ -128,6 +132,8 @@
                 font-weight: bold;
                 width: 100%;
                 padding: 0 40px;
+                transform: scale(0);
+                transition: transform .5s ease;
             }
 
             .text__icon {
