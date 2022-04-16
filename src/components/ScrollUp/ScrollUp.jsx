@@ -1,18 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 const ScrollUp = () => {
-  const scroll = useRef();
+  const [isVisible, setsVisible] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let st = window.pageYOffset;
-      if (st === 0) {
-        scroll.current.style.opacity = 0;
-        scroll.current.style.visibility = "hidden";
-      }
-      if (st > 0) {
-        scroll.current.style.opacity = 1;
-        scroll.current.style.visibility = "visible";
-      }
+      st === 0 ? setsVisible(false) : setsVisible(true);
     });
   }, []);
 
@@ -21,7 +14,15 @@ const ScrollUp = () => {
   };
 
   return (
-    <div onClick={smoothScroll} ref={scroll} id="scrollUp">
+    <div
+      onClick={smoothScroll}
+      id="scrollUp"
+      style={
+        !isVisible
+          ? { opacity: 0, visibility: "hidden" }
+          : { opacity: 1, visibility: "visible" }
+      }
+    >
       <i className="fa fa-angle-up"></i>
     </div>
   );

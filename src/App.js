@@ -1,14 +1,19 @@
 import Loading from "components/Loading/Loading";
-import { Home } from "pages";
-import { useEffect, useRef } from "react";
+import { Home } from "views/pages";
+import { useEffect, useState } from "react";
 function App() {
-  const content = useRef();
-
+  const [isLoad, setIsLoad] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
-      content.current.style.display = "block";
+    var load = setTimeout(() => {
+      setIsLoad(true);
     }, 2000);
 
+    return () => {
+      clearTimeout(load);
+    };
+  }, []);
+
+  useEffect(() => {
     let observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -34,12 +39,10 @@ function App() {
     });
   }, []);
 
-  useEffect(() => {});
-
   return (
     <>
-      <Loading />
-      <div ref={content} className="App">
+      <Loading style={!isLoad ? { display: "block" } : { display: "none" }} />
+      <div className="App" style={isLoad ? { display: "block" } : {}}>
         <Home />
       </div>
     </>

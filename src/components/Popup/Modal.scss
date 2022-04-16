@@ -1,8 +1,9 @@
 .popup-content {
   margin: auto;
   background: rgb(255, 255, 255);
-  width: 50%;
   width: 900px;
+  height: fit-content;
+  max-height: 900px;
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
 }
 
@@ -12,6 +13,7 @@
 
 .modal {
   position: relative;
+  display: block;
 
   .header {
     padding: 15px;

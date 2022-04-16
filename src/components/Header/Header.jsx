@@ -1,18 +1,16 @@
 import "./Header.scss";
 import { logo } from "assets/images";
+import { useState } from "react";
 
 const Header = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
   const handleOpenMenu = () => {
-    document.getElementById("theMenu").classList.toggle("menu__open");
-    let ele = document.getElementById("menuToggle").getElementsByTagName("i");
-    ele[0].classList.toggle("top__transform");
-    ele[1].classList.toggle("middle__transform");
-    ele[2].classList.toggle("bottom__transform");
+    setToggleMenu(!toggleMenu);
   };
 
   return (
     <header id="home">
-      <nav id="theMenu" className="menu">
+      <nav id="theMenu" className={toggleMenu ? "menu menu__open" : "menu"}>
         <div id="menu-options" className="menu__wrap">
           <div className="logo__flat">
             <img alt="personal-logo" className="img__responsive" src={logo} />
@@ -55,11 +53,31 @@ const Header = () => {
 
         <div id="menuToggle" onClick={handleOpenMenu} className="">
           <div className="toggle-normal">
-            <i className="material-icons top-bar top__transform">remove</i>
-            <i className="material-icons middle-bar middle__transform">
+            <i
+              className={
+                toggleMenu
+                  ? "material-icons top-bar top__transform"
+                  : "material-icons top-bar"
+              }
+            >
               remove
             </i>
-            <i className="material-icons bottom-bar bottom__transform">
+            <i
+              className={
+                toggleMenu
+                  ? "material-icons middle-bar middle__transform"
+                  : "material-icons middle-bar"
+              }
+            >
+              remove
+            </i>
+            <i
+              className={
+                toggleMenu
+                  ? "material-icons bottom-bar bottom__transform"
+                  : "material-icons bottom-bar"
+              }
+            >
               remove
             </i>
           </div>
