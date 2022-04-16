@@ -5,7 +5,6 @@ const BlogItem = ({ data, flip }) => {
   return (
     <div className={flip ? "blog__item flip" : "blog__item"}>
       <div className="item__image">
-        
         <figure>
           <img src={image} alt="Blog Images" />
           <div className="image__info">
@@ -20,7 +19,6 @@ const BlogItem = ({ data, flip }) => {
             </div>
           </div>
         </figure>
-
       </div>
       <div className="item__content">
         <div className="job">
@@ -40,7 +38,7 @@ const BlogItem = ({ data, flip }) => {
           <p>{workDescription}</p>
         </div>
         <div className="readMore">
-          <a href="/more-information" rel="noreferrer">
+          <a href="/" rel="noreferrer">
             Read More
           </a>
         </div>

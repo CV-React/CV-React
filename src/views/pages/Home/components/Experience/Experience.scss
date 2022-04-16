@@ -15,12 +15,17 @@
       opacity: 0.3;
       background: var(--main-color);
 
-      @media only screen and (min-width: 768px) {
+      @include desktop {
         left: 50%;
         margin-left: -2px;
         height: 73%;
         opacity: 0.4;
         background: var(--main-color);
+      }
+
+      @include md {
+        height: 95%;
+        top: 10px
       }
     }
   }

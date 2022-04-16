@@ -6,7 +6,7 @@ import "./Testimonials.scss";
 
 const Testimonials = () => {
   return (
-    <section className="testimonials">
+    <section id="testimonials" className="testimonials">
       <div className="container">
         <SectionTitle title={"Testimonials"} icon={handShake} />
         <TestimonialsCard />

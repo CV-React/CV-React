@@ -26,6 +26,63 @@ import {
 } from "assets/images";
 
 export const mockData = {
+  menuArr: [
+    {
+      href: "#home",
+      name: "Home",
+      icon: <i className="title__icon fa fa-user"></i>,
+    },
+    {
+      href: "#about",
+      name: "About",
+      icon: <i className="title__icon fa fa-dashboard"></i>,
+    },
+    {
+      href: "#education",
+      name: "Education",
+      icon: <i className="title__icon fa fa-graduation-cap"></i>,
+    },
+    {
+      href: "#skill",
+      name: "Skill",
+      icon: <i className="title__icon fa fa-sliders"></i>,
+    },
+    {
+      href: "#experience",
+      name: "Experience",
+      icon: <i className="title__icon fa fa-suitcase"></i>,
+    },
+    {
+      href: "#portfolios",
+      name: "Portfolios",
+      icon: <i className="title__icon fa fa-archive"></i>,
+    },
+    {
+      href: "#interest",
+      name: "Interest",
+      icon: <i className="title__icon fa fa-heart"></i>,
+    },
+    {
+      href: "#testimonials",
+      name: "Testimonials",
+      icon: <i className="title__icon fa fa-users"></i>,
+    },
+    {
+      href: "#pricing",
+      name: "Pricing",
+      icon: <i className="title__icon fa-regular fa-money-bill-1"></i>,
+    },
+    {
+      href: "#blog",
+      name: "Blog",
+      icon: <i className="title__icon fa fa-pencil-square"></i>,
+    },
+    {
+      href: "#contact",
+      name: "Contact",
+      icon: <i className="title__icon fa fa-envelope"></i>,
+    },
+  ],
   ownerDetail: [
     {
       icon: <IoMailSharp />,

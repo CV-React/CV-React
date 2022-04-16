@@ -2,6 +2,7 @@ import React from "react";
 
 const LogoSlideShowItem = ({ item }) => {
   const { imgUrl, title, type, desc, icon } = item;
+  console.log(icon);
 
   return (
     <>
@@ -11,7 +12,9 @@ const LogoSlideShowItem = ({ item }) => {
           <figcaption>
             <div className="item__title">
               <div className="text__center">
-                <p className="text__icon">{icon && <i className={icon}></i>}</p>
+                <p className="text__icon">
+                  {icon != null && <i className={icon}></i>}
+                </p>
                 <span>{title}</span>
                 <span>{type}</span>
               </div>

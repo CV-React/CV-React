@@ -31,6 +31,9 @@
       outline: none;
       border-bottom: 1px solid gainsboro;
       transition: all 0.3s ease;
+      font-size: 15px;
+      color: $textColor;
+      font-family: muli;
 
       &:focus {
         border-color: var(--secondary-color);
@@ -67,6 +70,9 @@
       border: none;
       outline: none;
       border-bottom: 1px solid gainsboro;
+      font-size: 15px;
+      color: $textColor;
+      font-family: muli;
 
       &:focus {
         border-color: var(--secondary-color);
@@ -100,6 +106,7 @@
       width: 115px;
       transition: box-shadow 0.3s ease;
       @include boxShadow;
+      cursor: pointer;
 
       &:hover {
         @include boxShadowHover;

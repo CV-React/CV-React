@@ -9,8 +9,8 @@ const AllTab = ({ data, isShowPlusBtn }) => {
   const dribbleData = data.filter((e) => e.filter.includes("DRIBBLE"));
   const websiteData = data.filter((e) => e.filter.includes("WEBSITES"));
   return (
-    <div className="AllSlide">
-      <div className="AllSlide__wrap">
+    <div className="all">
+      <div className="all__wrap">
         {logoData &&
           !!logoData.length &&
           logoData.map((item, index) => (

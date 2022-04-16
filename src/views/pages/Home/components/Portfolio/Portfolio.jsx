@@ -12,7 +12,6 @@ import LogoTab from "./components/LogoTab/LogoTab";
 const Portfolio = () => {
   const [isShowPlusBtn, setIsShowPlusBtn] = useState(false);
   const [filter, setFilter] = useState("ALL");
-  const [clickImg, setClickImg] = useState(false); //set click image to open popup image
   const [chooseImg, setChooseImg] = useState();
   const [isOpenPopup, setIsOpenPopup] = useState(false);
 
@@ -24,8 +23,8 @@ const Portfolio = () => {
     setFilter(e.target.innerText);
   };
 
-  const handlePopup = () => {
-    setClickImg(false);
+  const handleClosePopup = () => {
+    setIsOpenPopup(false);
   };
 
   const handleVisible = () => {
@@ -40,9 +39,9 @@ const Portfolio = () => {
 
   return (
     <PortfolioContext.Provider
-      value={{ chooseImg, setChooseImg, isOpenPopup, setIsOpenPopup }}
+      value={{ chooseImg, setChooseImg, setIsOpenPopup }}
     >
-      <section id="portfolio" className="portfolio">
+      <section id="portfolios" className="portfolio">
         <div className="container">
           <SectionTitle title="Portfolios" icon={safe} />
           <div className="lightBox animated">
@@ -82,17 +81,17 @@ const Portfolio = () => {
             </button>
           </div>
           <div
-            onClick={handlePopup}
+            onClick={handleClosePopup}
             className={
-              clickImg ? "portfolio__popup active" : "portfolio__popup"
+              isOpenPopup ? "portfolio__popup active" : "portfolio__popup"
             }
           >
-            {/* <div className="content">
+            <div className="content">
               <figure>
-                <img src={image} />
+                <img src={chooseImg} alt="choose" />
                 <i className="fa fa-close"></i>
               </figure>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

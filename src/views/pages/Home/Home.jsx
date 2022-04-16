@@ -1,5 +1,5 @@
 import { ColorPalate, Header, ScrollUp } from "components";
-import React from "react";
+import React, { useState } from "react";
 import {
   About,
   Banner,
@@ -16,8 +16,10 @@ import {
 } from "./components";
 
 const Home = () => {
+  const [color, setColor] = useState("green");
+
   return (
-    <>
+    <div className={color}>
       <Header />
       <HeaderBg />
       <Banner />
@@ -32,8 +34,8 @@ const Home = () => {
       <Blog />
       <Contact />
       <ScrollUp />
-      <ColorPalate />
-    </>
+      <ColorPalate setColor={setColor} />
+    </div>
   );
 };
 

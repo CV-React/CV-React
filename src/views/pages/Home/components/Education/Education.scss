@@ -5,6 +5,10 @@
   height: auto;
   margin-top: 70px;
 
+  @include md {
+    margin-top: 50px;
+  }
+
   .card {
     position: relative;
     background-color: #fff;
