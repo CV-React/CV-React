@@ -5,7 +5,11 @@ const Modal = ({ data }) => {
   const { title, time, img, desc } = data;
   return (
     <Popup
-      trigger={<button type="button">...</button>}
+      trigger={
+        <button type="button">
+          <i className="fa-solid fa-ellipsis"></i>
+        </button>
+      }
       modal
       position={"top top"}
       closeOnDocumentClick

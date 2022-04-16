@@ -5,11 +5,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   color: #616161;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
+
 img {
   vertical-align: middle;
 }
@@ -20,6 +24,7 @@ h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 a {
   text-decoration: none;
 }
@@ -39,7 +44,7 @@ a {
 
 .btn {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 8px 12px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 400;
@@ -89,11 +94,13 @@ a {
       width: 750px;
     }
   }
+
   @media only screen and (min-width: 992px) {
     & {
       width: 970px;
     }
   }
+
   @media only screen and (min-width: 1200px) {
     & {
       width: 1000px;
@@ -107,11 +114,13 @@ a {
   animation-fill-mode: both;
   opacity: 0;
 }
+
 .loadingAnimate {
   @include animated;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
 .fade {
   -webkit-animation-name: fadeUp;
   animation-name: fadeUp;
@@ -205,6 +214,7 @@ a {
   visibility: hidden;
   transition: opacity 0s;
 }
+
 .image__responsive {
   display: block;
   max-width: 100%;

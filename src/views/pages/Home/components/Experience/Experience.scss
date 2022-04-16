@@ -18,7 +18,7 @@
       @media only screen and (min-width: 768px) {
         left: 50%;
         margin-left: -2px;
-        height: 71%;
+        height: 73%;
         opacity: 0.4;
         background: var(--main-color);
       }
@@ -42,6 +42,23 @@
     &__content {
       padding: 40px;
       border-radius: 0 0 2px 2px;
+
+      h6 {
+        color: #616161;
+        margin: 5px 0;
+      }
+
+      .timeline__title {
+        font-family: ralewayMedium;
+        font-size: 21px;
+      }
+
+      .timeline__info {
+        h6 {
+          font-family: ralewayMedium;
+          font-size: 20px;
+        }
+      }
 
       p {
         margin: 0;

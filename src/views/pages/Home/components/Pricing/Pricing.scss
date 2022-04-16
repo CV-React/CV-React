@@ -72,8 +72,12 @@
         text-align: center;
         margin: 22px auto;
 
+        div span {
+          font-family: muli, sans-serif;
+        }
+
         div:not(:first-child) {
-          margin-top: 15px;
+          margin-top: 5px;
         }
       }
 
@@ -86,20 +90,12 @@
         button {
           margin: 22px 0;
           text-transform: uppercase;
+
+          &:hover {
+            color: #fff;
+          }
         }
       }
-    }
-  }
-
-  .item__button {
-    button {
-      text-transform: uppercase;
-      padding: 10px 13px;
-      @include fs(14);
-      background-color: var(--main-color);
-      color: white;
-      border-radius: 2px;
-      border: none;
     }
   }
 }

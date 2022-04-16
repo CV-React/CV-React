@@ -23,10 +23,26 @@
       padding: 40px;
       border-radius: 0 0 2px 2px;
 
+      h6 {
+        color: #616161;
+        margin: 5px 0;
+      }
+
+      .timeline__title {
+        font-family: ralewayMedium;
+        font-size: 21px;
+      }
+
+      .timeline__info {
+        h6 {
+          font-family: ralewayMedium;
+          font-size: 20px;
+        }
+      }
+
       p {
         margin: 0;
         color: inherit;
-        text-align: center;
       }
 
       .modal__dot {
