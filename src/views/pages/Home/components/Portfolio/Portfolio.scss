@@ -25,6 +25,7 @@
       text-transform: uppercase;
       padding: 10px 15px;
       border-bottom: 5px solid transparent;
+      cursor: pointer;
 
       &.active {
         border-bottom: 5px solid var(--secondary-color);
