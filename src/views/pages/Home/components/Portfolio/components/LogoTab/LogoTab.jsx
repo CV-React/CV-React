@@ -10,7 +10,7 @@ const LogoTab = ({ data }) => {
         {data &&
           !!data.length &&
           data.map((item, index) => (
-            <div className="item" key={index}>
+            <div className={`item ${item.classList}`} key={index}>
               <LogoTabItem item={item} />
             </div>
           ))}

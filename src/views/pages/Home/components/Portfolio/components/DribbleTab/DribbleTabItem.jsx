@@ -1,11 +1,18 @@
-import React from "react";
+import { PortfolioContext } from "context/Context";
+import React, { useContext } from "react";
 
 const DribbleTabItem = ({ item }) => {
   const { imgUrl, title, type, desc, icon } = item;
+  const { setChooseImg, setIsOpenPopup } = useContext(PortfolioContext);
 
   return (
     <div className="item__content">
-      <figure>
+      <figure
+        onClick={() => {
+          setChooseImg(imgUrl);
+          setIsOpenPopup(true);
+        }}
+      >
         <img src={imgUrl} alt="item Images" />
         <figcaption>
           <div className="item__title">

@@ -2,7 +2,7 @@ import { PortfolioContext } from "context/Context";
 import React, { useContext } from "react";
 
 const WebsiteTabItem = ({ item }) => {
-  const { imgUrl, title, type, desc } = item;
+  const { imgUrl, title, type, desc, icon } = item;
   const { setChooseImg, setIsOpenPopup } = useContext(PortfolioContext);
 
   return (
@@ -17,6 +17,9 @@ const WebsiteTabItem = ({ item }) => {
         <figcaption>
           <div className="item__title">
             <div className="text__center">
+              <p className="text__icon">
+                {icon != null && <i className={icon}></i>}
+              </p>
               <span>{title}</span>
               <span>{type}</span>
             </div>

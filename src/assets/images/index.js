@@ -27,3 +27,6 @@ export const c10 = require("./c10.png");
 export const port1 = require("./port1.jpg");
 export const port2 = require("./port2.jpg");
 export const port3 = require("./port3.jpg");
+export const port4 = require("./big-1.jpg");
+export const port5 = require("./port5.jpg");
+export const port6 = require("./port6.jpg");

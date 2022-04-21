@@ -75,7 +75,7 @@ const Portfolio = () => {
             >
               <i
                 className={
-                  isShowPlusBtn ? "fa-solid fa-angles-up" : "fa fa-plus"
+                  isShowPlusBtn ? "fa-solid fa-arrow-up" : "fa fa-plus"
                 }
               ></i>
             </button>

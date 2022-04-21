@@ -1,3 +1,4 @@
+@import "assets/scss/vars.scss";
 @import "assets/scss/mixin.scss";
 
 .detail__wrap {
@@ -9,13 +10,13 @@
   }
 
   @include md {
-    max-width: 40%;
+    max-width: fit-content;
     margin-bottom: 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin: auto
+    margin: auto;
   }
 
   .detail__item {

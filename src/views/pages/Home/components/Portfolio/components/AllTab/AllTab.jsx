@@ -4,7 +4,7 @@ import DribbleSlideShowItem from "../DribbleTab/DribbleTabItem";
 import WebsiteSlideShowItem from "../WebsiteTab/WebsiteTabItem";
 import "./AllTab.scss";
 
-const AllTab = ({ data, isShowPlusBtn }) => {
+const AllTab = ({ data }) => {
   const logoData = data.filter((e) => e.filter.includes("LOGO"));
   const dribbleData = data.filter((e) => e.filter.includes("DRIBBLE"));
   const websiteData = data.filter((e) => e.filter.includes("WEBSITES"));
@@ -14,21 +14,23 @@ const AllTab = ({ data, isShowPlusBtn }) => {
         {logoData &&
           !!logoData.length &&
           logoData.map((item, index) => (
-            <div className="item" key={index}>
+            <div className={`item ${item.classList}`} key={index}>
               <LogoSlideShowItem item={item} />
             </div>
           ))}
+
         {dribbleData &&
           !!dribbleData.length &&
           dribbleData.map((item, index) => (
-            <div className="item" key={index}>
+            <div className={`item ${item.classList}`} key={index}>
               <DribbleSlideShowItem item={item} />
             </div>
           ))}
+
         {websiteData &&
           !!websiteData.length &&
           websiteData.map((item, index) => (
-            <div className="item" key={index}>
+            <div className={`item ${item.classList}`} key={index}>
               <WebsiteSlideShowItem item={item} />
             </div>
           ))}
