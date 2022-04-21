@@ -5,11 +5,76 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   color: #616161;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+
+  .blue {
+    --main-color: #1f5694;
+    --secondary-color: #ff5722;
+  }
+
+  .brown {
+    --main-color: #5d4037;
+    --secondary-color: #3f51b5;
+  }
+
+  .gray {
+    --main-color: #616161;
+    --secondary-color: #f44336;
+  }
+
+  .green {
+    --main-color: #06a763;
+    --secondary-color: #1976d2;
+  }
+
+  .pink {
+    --main-color: #d81b60;
+    --secondary-color: #9c27b0;
+  }
+
+  .purple {
+    --main-color: #5f1a89;
+    --secondary-color: #e61f63;
+  }
+
+  .red {
+    --main-color: #e73a2e;
+    --secondary-color: #ff8f00;
+  }
+
+  .teal {
+    --main-color: #038175;
+    --secondary-color: #9c27b0;
+  }
+
+  .white {
+    --main-color: #06a763;
+    --secondary-color: #1976d2;
+
+    .banner .quick-profile {
+      background: #f5f5f5 !important;
+    }
+
+    .banner .quick-profile__img .splash {
+      border-color: rgba(223, 50, 50, 0) transparent transparent #f5f5f5 !important;
+    }
+
+    .owner__title,
+    .owner__subTitle,
+    .detail__wrap .detail__item .item__icon svg,
+    .detail__wrap .detail__item .item__text {
+      color: #616161 !important;
+    }
+
+  }
 }
+
 img {
   vertical-align: middle;
 }
@@ -20,6 +85,7 @@ h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 a {
   text-decoration: none;
 }
@@ -28,9 +94,18 @@ a {
   display: none;
 }
 
+.card {
+  position: relative;
+  background-color: #fff;
+  transition: box-shadow 0.25s;
+  -webkit-transition: box-shadow 0.25s;
+  border-radius: 0 !important;
+  margin: 8px 0;
+}
+
 .btn {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 8px 12px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 400;
@@ -80,11 +155,13 @@ a {
       width: 750px;
     }
   }
+
   @media only screen and (min-width: 992px) {
     & {
       width: 970px;
     }
   }
+
   @media only screen and (min-width: 1200px) {
     & {
       width: 1000px;
@@ -98,11 +175,13 @@ a {
   animation-fill-mode: both;
   opacity: 0;
 }
+
 .loadingAnimate {
   @include animated;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
 .fade {
   -webkit-animation-name: fadeUp;
   animation-name: fadeUp;
@@ -194,10 +273,58 @@ a {
   box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s ease;
+  transition: opacity 0s;
 }
+
 .image__responsive {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.owner {
+  &__title {
+    display: block;
+    width: 100%;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 29%);
+    font-family: raleway;
+
+    @include fs(35);
+    margin: 1.14rem 0 0.912rem 0;
+  }
+
+  &__subTitle {
+    display: block;
+    width: 100%;
+    font-weight: 300;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 29%);
+
+    @include fs(19);
+    margin-bottom: 25px;
+    font-family: raleway_thin;
+  }
+}
+
+
+.inLeft,
+.inRight {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.inLeft {
+  -webkit-animation-name: InLeft;
+  animation-name: InLeft;
+}
+
+.inRight {
+  -webkit-animation-name: InRight;
+  animation-name: InRight;
 }

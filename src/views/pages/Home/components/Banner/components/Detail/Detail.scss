@@ -1,0 +1,58 @@
+@import "assets/scss/vars.scss";
+@import "assets/scss/mixin.scss";
+
+.detail__wrap {
+  max-width: 515px;
+  margin-bottom: 10px;
+
+  @include desktop {
+    max-width: 278px
+  }
+
+  @include md {
+    max-width: fit-content;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .detail__item {
+    @include flex(flex-start, flex-start);
+    margin-bottom: 5px;
+
+    .item__icon {
+      flex: 0 0 6%;
+      width: 100%;
+      max-width: 100%;
+
+      svg {
+        color: #fff;
+        height: 25px;
+        width: 25px;
+      }
+    }
+
+    .item__text {
+      flex: 0 0 94%;
+      width: 100%;
+      max-width: 100%;
+      @include flex(flex-start, center);
+      height: 26px;
+      color: #fff;
+      font-family: raleway_thin;
+      font-weight: 400;
+      font-size: 15px;
+
+      @include desktop {
+        margin-left: 10px;
+      }
+
+      @include md {
+        margin-left: 10px;
+      }
+    }
+  }
+}

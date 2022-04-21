@@ -1,16 +1,8 @@
-import { useEffect, useRef } from "react";
 import "./Loading.scss";
 
-const Loading = () => {
-  const load = useRef();
-  useEffect(() => {
-    setTimeout(() => {
-      load.current.style.display = "none";
-    }, 2000);
-  }, []);
-
+const Loading = ({ ...rest }) => {
   return (
-    <div ref={load} id="loading">
+    <div id="loading" {...rest}>
       <div id="loading__center">
         <div id="loading__center-absolute">
           <div className="box__holder loadingAnimate bounceInDown">

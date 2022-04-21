@@ -1,17 +1,18 @@
+import { useState } from "react";
 import "./ColorPalate.scss";
 
-const ColorPalate = () => {
+const ColorPalate = ({ setColor }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleOpen = () => {
-    document.getElementById("color__palate").classList.toggle("open");
+    setIsOpen(!isOpen);
   };
 
   const handleChangeColor = (e) => {
-    document
-      .getElementById("switch_style")
-      .setAttribute("href", `./switch_style/${e.target.id}.css`);
+    setColor(e.target.id);
   };
   return (
-    <div id="color__palate" className="popOut">
+    <div id="color__palate" className={isOpen ? "popOut open" : "popOut"}>
       <div
         id="color__toggle"
         onClick={handleOpen}

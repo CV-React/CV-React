@@ -1,0 +1,12 @@
+export { default as Banner } from "./Banner/Banner";
+export { default as About } from "./About/About";
+export { default as Skill } from "./Skill/Skill";
+export { default as Education } from "./Education/Education";
+export { default as Experience } from "./Experience/Experience.jsx";
+export { default as HeaderBg } from "./HeaderBackground/HeaderBackground.jsx";
+export { default as Interest } from "./Interest/Interest";
+export { default as Pricing } from "./Pricing/Pricing";
+export { default as Blog } from "./Blog/Blog";
+export { default as Portfolio } from "./Portfolio/Portfolio";
+export { default as Testimonials } from "./Testimonials/Testimonials";
+export { default as Contact } from "./Contact/Contact";

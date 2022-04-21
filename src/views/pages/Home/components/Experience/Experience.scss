@@ -1,0 +1,91 @@
+@import "assets/scss";
+
+.experience {
+  .timeline__experience {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 23px;
+      left: 50%;
+      height: 99.5%;
+      width: 4px;
+      opacity: 0.3;
+      background: var(--main-color);
+
+      @include desktop {
+        left: 50%;
+        margin-left: -2px;
+        height: 73%;
+        opacity: 0.4;
+        background: var(--main-color);
+      }
+
+      @include md {
+        height: 95%;
+        top: 10px
+      }
+    }
+  }
+
+  .card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 0 !important;
+    margin: 8px 0;
+    @include boxShadow;
+    transition: box-shadow 0.25s;
+    -webkit-transition: box-shadow 0.25s;
+
+    @media only screen and (min-width: 768px) {
+      width: 44%;
+      margin: 0;
+    }
+
+    &__content {
+      padding: 40px;
+      border-radius: 0 0 2px 2px;
+
+      h6 {
+        color: #616161;
+        margin: 5px 0;
+      }
+
+      .timeline__title {
+        font-family: ralewayMedium;
+        font-size: 21px;
+      }
+
+      .timeline__info {
+        h6 {
+          font-family: ralewayMedium;
+          font-size: 20px;
+        }
+      }
+
+      p {
+        margin: 0;
+        color: inherit;
+      }
+
+      .modal__dot {
+        outline: 0;
+        font-size: 20px;
+        color: var(--secondary-color);
+      }
+    }
+
+    &__more {
+      button {
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
