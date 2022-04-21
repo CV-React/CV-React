@@ -83,7 +83,6 @@
   }
 }
 
-
 // Flex which can have choose justify-content and align-items
 @mixin flex($justify, $align) {
   display: flex;
@@ -106,17 +105,13 @@
 
   @if $width>0 {
     width: #{$width}px;
-  }
-
-  @else {
+  } @else {
     width: 100px;
   }
 
   @if $height>0 {
     height: #{$height}px;
-  }
-
-  @else {
+  } @else {
     height: 100px;
   }
 }
@@ -136,14 +131,10 @@
   @if $fontWeight==bold {
     font-weight: normal;
     font-style: normal;
-  }
-
-  @else if $fontWeight==bolder {
+  } @else if $fontWeight==bolder {
     font-weight: normal;
     font-style: normal;
-  }
-
-  @else if type-of($fontWeight)=="number" {
+  } @else if type-of($fontWeight) == "number" {
     font-weight: normal;
     font-style: normal;
   }
