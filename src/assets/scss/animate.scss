@@ -267,8 +267,8 @@
 #portfolios .InLeft {
   -webkit-animation-name: InLeft;
   animation-name: InLeft;
-  -webkit-animation-duration: .8s;
-  animation-duration: .8s;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -299,7 +299,6 @@
   }
 }
 
-
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -319,7 +318,6 @@
 }
 
 @-webkit-keyframes bounce {
-
   0%,
   20%,
   53%,
@@ -356,7 +354,6 @@
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   53%,
@@ -399,7 +396,6 @@
   transform-origin: center bottom;
 }
 
-
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scaleX(1);
@@ -440,7 +436,6 @@
 }
 
 @-webkit-keyframes bounceInDown {
-
   0%,
   60%,
   75%,
@@ -479,7 +474,6 @@
 }
 
 @keyframes bounceInDown {
-
   0%,
   60%,
   75%,

@@ -1,16 +1,16 @@
 @import "assets/scss";
 
 .dribbleSlide__wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-column: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-column: 15px;
 
-    @include desktop__big {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  @include desktop__big {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @include custom__sp {
-        grid-template-columns: 1fr;
-    }
+  @include custom__sp {
+    grid-template-columns: 1fr;
+  }
 }
