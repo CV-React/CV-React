@@ -1,6 +1,6 @@
-import Loading from "components/Loading/Loading";
 import { Home } from "views/pages";
 import { useEffect, useState } from "react";
+import { Loading } from "./components";
 function App() {
   const [isLoad, setIsLoad] = useState(false);
   useEffect(() => {
